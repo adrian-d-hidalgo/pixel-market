@@ -1,5 +1,5 @@
 {
-  "name": "gaming-platform-backend",
+  "name": "pixel-market-backend",
   "version": "0.1.0",
   "description": "",
   "author": "",
@@ -21,8 +21,13 @@
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
+    "@nestjs/config": "^3.2.2",
     "@nestjs/core": "^10.0.0",
+    "@nestjs/jwt": "^10.2.0",
+    "@nestjs/mongoose": "^10.0.5",
     "@nestjs/platform-express": "^10.0.0",
+    "@solana/web3.js": "^1.91.4",
+    "mongoose": "^8.3.0",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1"
   },
