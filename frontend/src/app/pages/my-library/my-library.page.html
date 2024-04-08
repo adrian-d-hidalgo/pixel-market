@@ -1,0 +1,17 @@
+<section class="game-list">
+    @for (game of games; track game.title) {
+    <mat-card class="game-item">
+        <mat-card-header>
+            <mat-card-title>{{game.title}}</mat-card-title>
+            <mat-card-subtitle>{{game.price}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{game.image}}" alt="Photo of a Shiba Inu">
+        <mat-card-actions>
+            <button mat-button>SELL</button>
+            <button mat-button>CHANGE</button>
+        </mat-card-actions>
+    </mat-card>
+    } @empty {
+    <p>There are no items.</p>
+    }
+</section>

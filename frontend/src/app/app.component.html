@@ -1,0 +1,14 @@
+<mat-toolbar class="auth-toolbar">
+  <span class="toolbar-spacer"></span>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>person</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-toolbar class="menu-toolbar">
+  <button mat-button routerLink="/my-library" routerLinkActive="active">My library</button>
+  <button mat-button routerLink="/marketplace" routerLinkActive="active">Marketplace</button>
+  <button mat-button routerLink="/trading" routerLinkActive="active">Trading</button>
+</mat-toolbar>
+
+<router-outlet />

@@ -1,0 +1,11 @@
+.game-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.game-item {
+  width: calc(33.33% - 10px);
+  margin-bottom: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+}
