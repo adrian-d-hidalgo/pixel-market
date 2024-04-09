@@ -6,7 +6,6 @@ import { Game } from './games.schema';
 import { LicensesService } from '../licenses/licenses.service';
 import { UsersService } from '../users/users.service';
 import { SolanaWalletService } from '../solana-wallet/solana-wallet.service';
-import { LAMPORTS_PER_SOL, PublicKey, SystemProgram, Transaction } from '@solana/web3.js';
 
 @Injectable()
 export class GamesService {
@@ -37,10 +36,11 @@ export class GamesService {
         const transferResult = await this.solanaWalletService.transfer(
             // TODO: Remove hardcoded wallet address
             // @ts-ignore
-            user._id, "CenYq6bDRB7p73EjsPEpiYN7uveyPUTdXkDkgUduboaN", game.price
+            user._id, "2p9xH5AkrFc6Q89JXAivtt1faghUTGJpzxx3upc9r89Z", game.price
         );
 
         // TODO: Check transfer result
+        console.log(transferResult);
 
         return this.licensesService.create(userId, gameId);
     }
