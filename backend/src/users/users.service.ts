@@ -12,9 +12,10 @@ export class UsersService {
         private solanaWalletService: SolanaWalletService
     ) { }
 
-    public async create(username: string, password: string): Promise<User> {
+    public async create(username: string, email: string, password: string): Promise<User> {
         const user = new this.userModel({
             username,
+            email,
             password
         });
 

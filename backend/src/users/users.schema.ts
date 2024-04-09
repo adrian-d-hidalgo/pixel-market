@@ -14,7 +14,8 @@ export class User {
 
     @Prop({
         type: mongoose.Schema.Types.String,
-        required: true
+        required: true,
+        unique: true
     })
     email: string;
 

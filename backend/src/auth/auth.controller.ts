@@ -19,7 +19,7 @@ export class AuthController {
     @HttpCode(HttpStatus.CREATED)
     @Post('signup')
     signUp(@Body() signUpDto: Record<string, any>) {
-        return this.authService.signUp(signUpDto.username, signUpDto.password);
+        return this.authService.signUp(signUpDto.username, signUpDto.email, signUpDto.password);
     }
 
     @HttpCode(HttpStatus.OK)

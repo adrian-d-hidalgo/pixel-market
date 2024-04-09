@@ -14,9 +14,10 @@ export class AuthService {
 
     public async signUp(
         username: string,
-        pass: string,
+        email: string,
+        password: string,
     ): Promise<{ access_token: string }> {
-        const user = await this.usersService.create(username, pass);
+        const user = await this.usersService.create(username, email, password);
 
         const access_token = await this.createToken(user);
 
